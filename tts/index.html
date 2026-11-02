@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文本转语音 – 真实 AI 语音生成器 | Microsoft Azure</title>
+<meta name="keywords" content="Microsoft Azure,TTS,TTS语音合成,微软TTS,文本转语音,配音,视频配音">
+<meta name="description" content="Microsoft Azure，文本转语音，文本朗读，让机器能够说话。">
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="row" style="margin: 4%;">
+        <div class="col-md-12">
+            <div id="getresult">
+                
+            </div>
+        <h1>TTS - 文本转语言<small> A Speech service feature that converts text to lifelike speech</small></h1>
+        <br>
+        </div>
+        <div class="col-md-7">
+<textarea class="form-control" rows="20" id="text">
+你可将此文本替换为所需的任何文本。你可在此文本框中编写或在此处粘贴你自己的文本。
+        
+试用不同的语言和声音。改变语速和音调。
+
+部分语音无法使用模仿与感情功能，可使用晓墨体验感情功能，使用晓晓体验模仿功能。
+        
+请尽情使用文本转语音功能！
+
+</textarea>
+        </div>
+        <div class="col-md-5 form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">语言</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="language">
+                        <option>请选择语言（必选）</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">语音</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="voice">
+                        <option>请选择语音（必选）</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">模仿</label>
+                <div class="col-sm-10">
+                    <select id="role" class="form-control">
+                        <option value="0">请选择模仿（非必选）</option>
+                        <option value="Girl">模拟女孩</option>
+                        <option value="Boy">模拟男孩</option>
+                        <option value="YoungAdultFemale">模拟年轻成年女性</option>
+                        <option value="YoungAdultMale">模拟年轻成年男性</option>
+                        <option value="OlderAdultFemale">模拟年长的成年女性</option>
+                        <option value="OlderAdultMale">模拟年长的成年男性</option>
+                        <option value="SeniorFemale">模拟老年女性</option>
+                        <option value="SeniorMale">模拟老年男性</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">感情</label>
+                <div class="col-sm-10">
+                    <select id="style" class="form-control">
+                        <option value="0">请选择感情（非必选）</option>
+                        <option value="affectionate">以较高的音调和音量表达温暖而亲切的语气</option>
+                        <option value="angry">表达生气和厌恶的语气</option>
+                        <option value="assistant">热情而轻松的语气</option>
+                        <option value="calm">以沉着冷静的态度说话</option>
+                        <option value="chat">表达轻松随意的语气</option>
+                        <option value="cheerful">表达积极愉快的语气</option>
+                        <option value="customerservice">友好热情的语气</option>
+                        <option value="depressed">调低音调和音量来表达忧郁、沮丧的语气</option>
+                        <option value="disgruntled">表达轻蔑和抱怨的语气</option>
+                        <option value="embarrassed">在说话者感到不舒适时表达不确定、犹豫的语气</option>
+                        <option value="empathetic">表达关心和理解</option>
+                        <option value="envious">当你渴望别人拥有的东西时，表达一种钦佩的语气</option>
+                        <option value="fearful">以较高的音调、较高的音量和较快的语速来表达恐惧、紧张的语气</option>
+                        <option value="gentle">以较低的音调和音量表达温和、礼貌和愉快的语气</option>
+                        <option value="lyrical">以优美又带感伤的方式表达情感</option>
+                        <option value="narration-professional">以专业、客观的语气朗读内容</option>
+                        <option value="narration-relaxed">为内容阅读表达一种舒缓而悦耳的语气</option>
+                        <option value="newscast">以正式专业的语气叙述新闻</option>
+                        <option value="newscast-casual">以通用、随意的语气发布一般新闻</option>
+                        <option value="newscast-formal">以正式、自信和权威的语气发布新闻</option>
+                        <option value="sad">表达悲伤语气</option>
+                        <option value="serious">表达严肃和命令的语气</option>
+                        <option value="shouting">就像从遥远的地方说话或在外面说话，但能让自己清楚地听到</option>
+                        <option value="advertisement-upbeat">用兴奋和精力充沛的语气推广产品或服务</option>
+                        <option value="sports-commentary">用轻松有趣的语气播报体育赛事</option>
+                        <option value="sports-commentary-excited">用快速且充满活力的语气播报体育赛事精彩瞬间</option>
+                        <option value="whispering">说话非常柔和，发出的声音小且温柔</option>
+                        <option value="terrified">表达一种非常害怕的语气，语速快且声音颤抖。 听起来说话人处于不稳定的疯狂状态</option>
+                        <option value="unfriendly">表达一种冷淡无情的语气</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">语速</label>
+                <div class="col-sm-10">
+                    <input type="range" min="-100" max="200" value="0" style="height: 30px;" oninput="document.getElementById('speed').innerHTML = this.value">
+                    <label id="speed">0</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">音调</label>
+                <div class="col-sm-10">
+                    <input type="range" min="-50" max="50" value="0" style="height: 30px;" oninput="document.getElementById('pitch').innerHTML = this.value">
+                    <label id="pitch">0</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="col-sm-2 control-label"></label>
+                <div class="col-sm-10">
+                    <button type="button" class="btn btn-primary" id="btnUpdate">生成</button>
+                    <!-- <button type="button" class="btn btn-success" id="play">播放</button> -->
+                    <button type="button" class="btn btn-info" id="download">播放下载</button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div style="padding: 20px 0 0 0;border-top: solid 1px #f0f4f5;text-align: center!important;bottom: 20px;left: 30%;">
+        <p>
+            Copyright © 2022 
+            Email：manage@timecn.cn
+            - All rights reserved
+            <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer nofollow">京ICP备09079937号</a>
+        </p>
+    </div>
+
+    
+    <script>
+        $("#play").attr({"disabled":"disabled"});
+        $("#download").attr({"disabled":"disabled"});
+
+        data = {"Chinese (香港)/zh-HK": ["zh-HK-HiuMaanNeural/HiuMaan (Neural) - 曉曼", "zh-HK-HiuGaaiNeural/HiuGaai (Neural) - 曉佳","zh-HK-WanLungNeural/WanLung (Neural) - 雲龍"], "Chinese (大陆)/zh-CN": ["zh-CN-XiaoxiaoNeural/Xiaoxiao (Neural) - 晓晓","zh-CN-YunyangNeural/Yunyang (Neural) - 云扬","zh-CN-XiaochenNeural/Xiaochen (Neural) - 晓辰","zh-CN-XiaohanNeural/Xiaohan (Neural) - 晓涵","zh-CN-XiaomoNeural/Xiaomo (Neural) - 晓墨","zh-CN-XiaoqiuNeural/Xiaoqiu (Neural) - 晓秋","zh-CN-XiaoruiNeural/Xiaorui (Neural) - 晓睿","zh-CN-XiaoshuangNeural/Xiaoshuang (Neural) - 晓双","zh-CN-XiaoxuanNeural/Xiaoxuan (Neural) - 晓萱","zh-CN-XiaoyanNeural/Xiaoyan (Neural) - 晓颜","zh-CN-XiaoyouNeural/Xiaoyou (Neural) - 晓悠","zh-CN-YunxiNeural/Yunxi (Neural) - 云希","zh-CN-YunyeNeural/Yunye (Neural) - 云野","zh-CN-LN-XiaobeiNeural/Xiaobei (Neural) - 晓北辽宁","zh-CN-henan-YundengNeural/Yundeng (Neural) - 云登河南","zh-CN-shaanxi-XiaoniNeural/Xiaoni (Neural) - 晓妮陕西","zh-CN-shandong-YunxiangNeural/Yunxiang (Neural) - 云翔山东","zh-CN-sichuan-YunxiNeural/Yunxi (Neural) - 云希四川"], "Chinese (台湾)/zh-TW": ["zh-TW-HsiaoChenNeural/HsiaoChen (Neural) - 曉臻","zh-TW-HsiaoYuNeural/HsiaoYu (Neural) - 曉雨","zh-TW-YunJheNeural/YunJhe (Neural) - 雲哲"]};
+
+        var p = document.getElementById("language");
+        var c = document.getElementById("voice");
+        //遍历数据 获取属性 作为一级菜单选项填充
+        for (var i in data) {
+            var optionP = document.createElement("option");
+            var res = i.split('/');
+            optionP.innerHTML = res[0];
+            optionP.value = res[1];
+            p.appendChild(optionP);
+        }
+        //一级select状态发生变化时 获取一级选项对应的内容 填入 二级select
+        p.onchange = function () {
+            var index=p.selectedIndex ;
+            var pro = (this.options[this.selectedIndex]).innerHTML+"/"+(this.options[this.selectedIndex]).value;
+            var citys = data[pro];
+            // 清空option
+            c.options.length = 0;
+            // 选择 请选择省  显示 请选择市
+            if(p.options[index].value=="请选择语言（必选）"){
+                var ele=document.createElement("option");
+                ele.innerHTML="请选择语音（必选）"
+                c.appendChild(ele);
+            }else{
+                for (var i=0;i<citys.length;i++) {
+                    var option_city = document.createElement("option");
+                    var res = citys[i].split('/');
+                    option_city.innerHTML = res[1];
+                    option_city.value = res[0];
+                    c.appendChild(option_city);
+                }
+            }
+        }
+        
+        var download_url = "";
+        
+        //获取页面要保持的数据到后台页面
+        $("#btnUpdate").click(function () {
+            $("#play").attr({"disabled":"disabled"});
+            $("#download").attr({"disabled":"disabled"});
+            
+            if($("#language").val() == "请选择语言（必选）" || $("#voice").val() == "请选择语音（必选）"){
+                alert("请先选择语言和语音");
+            }else{
+                $("#btnUpdate").html("生成中...");
+                $("#getresult").html("");
+                var language=$("#language").val();
+                var voice=$("#voice").val();
+                var text=$("#text").val();
+                var role=$("#role").val();
+                var style=$("#style").val();
+                var rate=$("#speed").html();
+                var pitch=$("#pitch").html();
+                    
+
+                $.ajax({
+                    type:"POST",
+                    url:"getSpeek.php",
+                    datatype:"JSON",
+                    data:{language:language,voice:voice,text:text,role:role,style:style,rate:rate,pitch:pitch},
+                    success:function(msg){
+                        var jsonObj = JSON.parse(msg);
+                        $("#btnUpdate").html("生成");
+                        if(jsonObj.code == 200){
+                            var success_html = '<div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>生成成功！</strong> 你现在可以点击查看按钮去播放或下载。</div>';
+                            $("#getresult").html(success_html);
+                            $("#btnUpdate").html("生成");
+                            
+                            $("#play").removeAttr("disabled");
+                            $("#download").removeAttr("disabled");
+                            download_url = jsonObj.download
+                        
+                        }else{
+                            var error_html = '<div class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>生成失败！</strong> 你可以再次点击生成按钮无需刷新页面重新执行。</div>';
+                            $("#getresult").html(error_html);
+                        }
+                    },
+                    error:function(){
+                        $("#btnUpdate").html("生成");
+                        
+                        var error_html = '<div class="alert alert-warning alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>生成失败！</strong> 你可以再次点击生成按钮无需刷新页面重新执行。</div>';
+                        $("#getresult").html(error_html);
+                        
+                    }
+                })
+            }
+        });
+        
+        $("#download").click(function () {
+            if(download_url != ''){
+                window.open(download_url);
+            }else{
+                alert("无可下载文件");
+            }
+            
+        });
+        
+    </script>
+    
+</body>
+</html>
