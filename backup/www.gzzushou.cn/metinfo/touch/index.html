@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>移动端多个DIV拖拽</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            height: calc(100vh);
+            overflow: hidden;
+        }
+        .container ul {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .container li {
+            list-style: none;
+            width: 180px;
+            height: 180px;
+            background: #f00;
+            display: inline-block;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <ul class="plan-content">
+        <li class="plan-device"></li>
+        <li class="plan-device"></li>
+        <li class="plan-device"></li>
+        <li class="plan-device"></li>
+        <li class="plan-device"></li>
+        <li class="plan-device"></li>
+        <li class="plan-device"></li>
+        <li class="plan-device"></li>
+        <li class="plan-device"></li>
+        <li class="plan-device"></li>
+        <li class="plan-device"></li>
+        <li class="plan-device"></li>
+    </ul>
+</div>
+
+<script>
+    window.onload = function(){
+        var list = document.querySelector('.plan-content');
+        var lis = list.getElementsByClassName('plan-device');
+        var startX = 0, startY = 0;
+        for(let i=0; i<lis.length; i++){
+            var that = this;
+            lis[i].addEventListener('touchstart', function(e){
+                console.log(e);
+                startX = e.targetTouches[0].pageX - this.offsetLeft;
+                startY = e.targetTouches[0].pageY - this.offsetTop;
+            });
+            lis[i].addEventListener('touchmove', function(e){
+                console.log(e);
+                var leftX = e.targetTouches[0].pageX - startX;
+                var topY = e.targetTouches[0].pageY - startY;
+                var parentW = e.targetTouches[0].target.offsetParent.clientWidth;
+                var parentH = e.targetTouches[0].target.offsetParent.clientHeight;
+                var thisW = e.targetTouches[0].target.clientWidth;
+                var thisH = e.targetTouches[0].target.clientHeight;
+                var l = parentW - thisW;
+                var t = parentH - thisH;
+                if(leftX <= 0){
+                    leftX = 0;
+                }
+                if(leftX >= l){
+                    leftX = l;
+                }
+                if(topY <= 0){
+                    topY = 0;
+                }
+                if(topY >= t){
+                    topY = t;
+                }
+                this.style.position = 'absolute';
+                this.style.left = leftX + 'px';
+                this.style.top = topY + 'px';
+            });
+        }
+    };
+</script>
+
+</body>
+</html>

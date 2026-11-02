@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panorama appversion="6.0.1" apprev="17227" id="node1" hideabout="1">
+  <input levelbias="0.400" levelingpitch="0" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" height="4729" leveltilesize="510" overlap="1" width="4729" levelbiashidpi="1.000" levelingroll="0">
+    <level height="4729" width="4729" preload="0" predecode="0"/>
+    <level height="2364" width="2364" preload="0" predecode="0"/>
+    <level height="1182" width="1182" preload="0" predecode="0"/>
+    <level height="591" width="591" preload="0" predecode="0"/>
+    <level height="295" width="295" preload="1" predecode="1"/>
+    <preview strip="1" color="0x808080"/>
+  </input>
+  <view pannorth="0" fovmode="0">
+    <start pan="-54.72" tilt="-30.2" fov="77.1" projection="4"/>
+    <flyin pan="-75" tilt="-90" fov="270" projection="9"/>
+    <min fovpixel="2" pan="-360" tilt="-90"/>
+    <max fovstereographic="270" fovfisheye="360" pan="0" tilt="90" fov="120" scaletofit="1"/>
+  </view>
+  <userdata datetime="2022/6/5 下午4:02" title="永旺梦乐城360°全景" latitude="23.163573" description="原图全景是一种简易的全景拍摄方式，&#xa;通过无人机设备航拍360全景图片进行合成&#xa;处理，原图摄影只做展示，如有需求可联系&#xa;董先生 18824108388。" comment="" tags="qj" longitude="113.617843" copyright="广州商旺网络科技有限公司" source="" info="" author="董先生 18824108388" customnodeid=""/>
+  <hotspots height="0" width="200" wordwrap="1">
+    <label textalpha="1" borderalpha="1" border="1" backgroundcolor="0xffffff" bordercolor="0x000000" backgroundalpha="1" height="0" background="1" width="200" wordwrap="1" enabled="1" textcolor="0x000000" borderradius="1"/>
+    <polystyle handcursor="1" borderalpha="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff" backgroundalpha="0.2509803921568627" mode="2"/>
+    <polyhotspot title="永旺梦乐城(广州新塘购物中心)" description="      永旺梦乐城广州新塘店位于广州增城经济技术开发区内，区域内拥有广深高速、广惠高速、107国道等粤港澳大湾区骨干交通网络，广州地铁13号线已于2017年底开通，广州东部交通枢纽及莞穗深城轨也于2019年投入运营，此外，广州地铁16号线与23号线也在规划中，于2021年6月2日开业，广东永旺综合百货超市（GMS）也将入驻，增城将添大型商业综合体。&#xa;      永旺梦乐城广州新塘店总面积约为7800㎡的日本综合娱乐设施运营商ROUND1（朗玩）已进驻，永旺梦乐城广州新塘引进了日本知名综合娱乐中心ROUND 1(朗玩)，为周边居民提供休闲娱乐的大型室内综合游戏设施店。公开资料显示，ROUND1（朗玩）于1980年在日本大阪创立，即将落地永旺梦乐城广州新塘的门店，面积约7800㎡，规模相当于日本的中型店。" id="Poly01" target="-47.8/-42.2/58.5" url="">
+      <polystring>-359.83/-25.75|-357.37/-48.18|-29.93/-53.38|-38.55/-50.74|-37.86/-48.71|-63.55/-44.77|-82/-19.33|-83.98/-19.22|-86.33/-12.74|-75.51/-12.16|-71.56/-14.78|-73.27/-16.08|-69.34/-19.49|-66.98/-19.82|-70.16/-17.55|-69.21/-16.53|-67.44/-16.07|-53.8/-18.6|-45.66/-21.25|-39.27/-24.36|-36.15/-26.68|-31.47/-26.63|-21.17/-23.2|-1.18/-24.64|-359.91/-25.13</polystring>
+    </polyhotspot>
+    <polyhotspot title="南方医科大学南方医院增城分院" description="      南方医科大学南方医院增城分院(广州市增城区中心医院)位于广州市东部国家级增城经济技术开发区，地理位置优越，交通便利，环境优美。增城分院是由广州市增城区政府与南方医院按照三级甲等综合医院的标准合作建设而成，通过两区一体化管理，实现与南方医院医疗服务、质量和效率的同质化。医院建设规模为总床位1500张，总占地面积147.16亩，总建筑面积23.46万平方米，总投资超过17亿元。医院首期开放床位610张，设置专业学科28个，包括内科、外科、专科和辅助科室。" id="Poly02" target="-75.3/-8.1/13.2" url="">
+      <polystring>-62.3/-12.35|-71.96/-8.51|-72.91/-8.08|-73.53/-8.13|-73.5/-7.76|-75.3/-6.76|-75.92/-6.65|-75.96/-3.57|-81.2/-3.61|-81.22/-9.33|-82.79/-9.5|-80.6/-11.82|-79.42/-12.01|-73.91/-11.95|-75.06/-12.15|-72.76/-13.78|-66.48/-13.13</polystring>
+    </polyhotspot>
+    <polyhotspot title="增城·永荟广场" description="      永荟广场位于广州东TOD国际交通枢纽附近（香山大道与创新大道交汇处），总建面约75万㎡大型商业综合体，对面50米即是新塘首家三甲医院南方医院增城分院，临近富士康、广汽本田等高新产业园区，周边5公里范围内为开发区知名500强企业布局，未来规划入住人口近100万人，项目落成之后会成为新塘开发区的商业核心圈。项目本身自带建面约23万㎡永旺梦乐城华南旗舰店，下楼即享缤纷生活，加上项目旁的新塘万达广场（已开业）等商业，未来将为区域带来百万消费人群。" id="Poly03" target="-111.2/-22.4/43.2" url="">
+      <polystring>-97.61/-15.34|-98.79/-2.37|-103.51/-2.63|-115.89/-7.35|-117.39/-35.39|-122.55/-39.77|-121.81/-43.52|-112.63/-45.88</polystring>
+    </polyhotspot>
+    <polyhotspot title="万达广场(广州新塘店)" description="      新塘万达广场项目位于新塘镇金融大道西侧总占地面积约4.25万㎡，建设用地面积约3.84万㎡，建设规模为地上四层（局部五层），地下二层（局部三层），最高高度24米，总建筑面积15.71万㎡，近1500个车位，项目于2017年6月15日开始施工，2018年12月28日开业运营。" id="Poly04" target="-146.3/-5.6/9.5" url="">
+      <polystring>-142.99/-7.01|-143.02/-4.96|-147.73/-5.24|-148.25/-6.57|-147.05/-7.42</polystring>
+    </polyhotspot>
+    <polyhotspot title="永旺梦乐城(地上停车场)" description="      永旺梦乐城广州新塘购物中心，位于广州市增城区香山大道与创新大道交汇处，总建筑面积约23万㎡，停车位多达4400个，集超市、潮流服饰、娱乐服务、美食影院等为一体，携手250多个品牌，力求成为给地区居民带来全新体验和幸福感的购物中心。&#xa;      现阶段收费规则（2022.06.05）&#xa;      09：30-22：30时段内，基础免费停车4小时，超出部分5元/小时，不足1小时按1小时收费（24小时累计）；&#xa;      22：30-次日09：30时段内，5元/小时（该时间段不享受4小时内免费的优惠政策）；&#xa;      朗玩和中影DY顾客可凭消费小票免费停车6小时。&#xa;&#xa;      【会员注册福利】&#xa;      永旺小程序注册会员并完善信息后，可在停车缴费页面自主领取2小时免费停车券（仅09：30-22：30时段内，每车每天限使用一张），最终解释权归永旺梦乐城所有。" id="Poly05" target="-94.8/-33.6/39.5" url="">
+      <polystring>-86.76/-18.1|-96.26/-18.04|-173.84/-73.85|-349.61/-61.81|-2.27/-65.52|-32.68/-62.19|-70.69/-54.13|-84.2/-26.28</polystring>
+    </polyhotspot>
+  </hotspots>
+  <media>
+    <sound nodechangekeep="0" ambientlevel="0.000" pansize="10.000" id="_background" pan="-1.000" mode="0" field="90.000" tilt="-1.000" level="1.000" loop="1" startmutedmobile="0" tiltsize="10.000">
+      <source url="media/2a.mp3"/>
+    </sound>
+  </media>
+  <transition type="crossdissolve" blendtime="1" softedge="0" zoomfov="20" zoomout="3" zoomin="2" zoomspeed="2" enabled="1" zoomoutpause="1" blendcolor="0x000000"/>
+  <flyintransition speed="2.00" enabled="1"/>
+  <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
+  <control lockedmouse="0" invertwheel="0" speedwheel="1" simulatemass="1" sensitivity="20" rubberband="0" hideabout="1" contextprojections="1" invertcontrol="1" lockedwheel="0" contextfullscreen="1" lockedkeyboardzoom="0" lockedkeyboard="0" dblclickfullscreen="1">
+    <menulink url="http://www.timecn.cn/panorama/yushan/index.html" text="合景誉山国际"/>
+  </control>
+</panorama>

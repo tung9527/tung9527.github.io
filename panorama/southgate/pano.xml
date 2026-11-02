@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panorama hideabout="1" apprev="17956" id="node1" appversion="6.1.8">
+  <input levelbiashidpi="1.000" levelingroll="0" width="2000" overlap="1" levelingpitch="0" height="2000" leveltilesize="510" levelbias="0.400" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg">
+    <level preload="0" width="2000" height="2000" predecode="0"/>
+    <level preload="0" width="1000" height="1000" predecode="0"/>
+    <level preload="1" width="500" height="500" predecode="1"/>
+    <preview color="0x808080" strip="1"/>
+  </input>
+  <view pannorth="0" fovmode="0">
+    <start pan="6.23" projection="4" tilt="-17.39" fov="68.38"/>
+    <flyin pan="0" projection="9" tilt="-90" fov="170"/>
+    <min pan="0" tilt="-90" fovpixel="2"/>
+    <max fovstereographic="270" pan="360" tilt="90" fovfisheye="360" scaletofit="1" fov="120"/>
+  </view>
+  <userdata latitude="-5.96564696" nodeid="node1" description="" info="" customnodeid="" title="" comment="" longitude="33.39760065" copyright="" source="" datetime="" tags="航拍素材收集" author="" heading="0"/>
+  <hotspots width="180" height="20" wordwrap="1">
+    <label enabled="1" backgroundalpha="1" border="1" textalpha="1" width="180" height="20" background="1" backgroundcolor="0xffffff" borderradius="1" textcolor="0x000000" bordercolor="0x000000" borderalpha="1" wordwrap="1"/>
+    <polystyle mode="3" backgroundalpha="0.25098" handcursor="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+    <hotspot pan="-337.27" tilt="-66.8" description="    广州市增城区永宁街誉景幼儿园，地处广州市增城区永宁街誉山国际小区晴山路1号，全园用地面积6600平方米，建筑面积5145平方米，招生规模18个班,540人。经综合考虑永宁街公民办幼儿园发展状况、学前教育规划布局和小区居民需求，永宁街誉山国际配套幼儿园定位为公办性质幼儿园，主要面向誉山国际所在小区招生，为尽量解决本小区居民子女入学需求。" title="誉景幼儿园" skinid="ht_info" url="" id="Point01" target=""/>
+    <hotspot pan="-110.72" tilt="-18.44" description="    誉山国际五区，附近有公立初中部。" title="誉山国际五区" skinid="ht_info" url="" id="Point02" target=""/>
+    <hotspot pan="-13.24" tilt="-12" description="    誉山国际四区天誉组团，附近有公立小学永宁街天誉小学，私立清华万博实验学校及私立圣果幼儿园(誉山国际校区)等学校。" title="誉山国际四区" skinid="ht_info" url="" id="Point03" target=""/>
+    <hotspot pan="-157.91" tilt="-37.77" description="    誉山国际小区配套初中，暂未投入使用。" title="誉山国际初中部" skinid="ht_info" url="" id="Point04" target=""/>
+    <hotspot pan="-329.85" tilt="-17.46" description="    誉山国际三区组团，自身配套逐渐完善，万人生活大社区。" title="誉山国际三区" skinid="ht_info" url="" id="Point05" target=""/>
+  </hotspots>
+  <media/>
+  <transition enabled="1" zoomoutpause="1" blendcolor="0x000000" softedge="0" zoomspeed="2" zoomout="0" type="crossdissolve" zoomfov="20" zoomin="0" blendtime="1"/>
+  <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+  <control lockedkeyboard="0" simulatemass="1" contextfullscreen="1" hideabout="1" lockedmouse="0" invertcontrol="1" rubberband="0" speedwheel="1" dblclickfullscreen="0" contextprojections="1" sensitivity="8" invertwheel="0" lockedkeyboardzoom="0" lockedwheel="0">
+    <menulink text="" url=""/>
+  </control>
+</panorama>
